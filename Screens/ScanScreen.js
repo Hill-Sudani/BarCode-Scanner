@@ -38,6 +38,18 @@ export default class ScannerClass extends React.Component {
   };
 
   render() {
+    const hasCameraPermissions = this.state.hascamerapermission;
+    const scanned = this.state.scanned;
+    const buttonState = this.state.buttonState;
+    if (buttonState === 'clicked' && hasCameraPermissions) {
+      return (
+        <BarCodeScanner
+          onBarCodeScanned={scanned ? undefined : this.handleBarCodeScanned}
+          style={StyleSheet.absoluteFillObject}
+        />
+      );
+    }
+    else if (buttonState === 'normal) {
     return (
       <View>
         <TouchableOpacity
@@ -51,15 +63,7 @@ export default class ScannerClass extends React.Component {
 
         <TouchableOpacity onPress = {this.getCameraPermissions} title = 'QR CODE SCANNER'><Text>Scan QR Code</Text></TouchableOpacity>
       </View>
-
-      if (buttonState !== 'normal' && hasCameraPermissions) {
-      return (
-        <BarCodeScanner
-          onBarCodeScanned={scanned ? undefined : this.handleBarCodeScanned}
-          style={StyleSheet.absoluteFillObject}
-        />
-      );
-    }
+     }
     );
   }
 }
