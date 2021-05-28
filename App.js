@@ -4,5 +4,7 @@ import Constants from 'expo-constants';
 import ScanScreen from './Screens/ScanScreen';
 
 export default class App extends React.Component {
-  <ScanScreen />
+  render() {
+    return <ScanScreen />
+  }
 }
