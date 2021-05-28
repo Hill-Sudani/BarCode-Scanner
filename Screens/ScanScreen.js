@@ -22,7 +22,7 @@ export default class ScannerClass extends React.Component {
           status === "granted" is false when user has not granted the permission
         */
       hasCameraPermissions: status === 'granted',
-      buttonState: id,
+      buttonState: 'clicked',
       scanned: false,
     });
   };
@@ -63,7 +63,7 @@ export default class ScannerClass extends React.Component {
 
         <TouchableOpacity onPress = {this.getCameraPermissions} title = 'QR CODE SCANNER'><Text>Scan QR Code</Text></TouchableOpacity>
       </View>
-     }
-    );
+     
+    ); }
   }
 }
