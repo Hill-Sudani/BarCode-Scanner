@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-export default class ScannerClass extends React.Component {
+export default class scannerClass extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -49,7 +49,7 @@ export default class ScannerClass extends React.Component {
         />
       );
     }
-    else if (buttonState === 'normal) {
+    else if (buttonState === 'normal') {
     return (
       <View>
         <TouchableOpacity
