@@ -7,7 +7,7 @@ export default class scannerClass extends React.Component {
   constructor() {
     super();
     this.state = {
-      hascameraPermission: null,
+      hascamerapermission: null,
       scanned: false,
       scannedData: '',
       buttonState: 'normal',
@@ -21,7 +21,7 @@ export default class scannerClass extends React.Component {
       /*status === "granted" is true when user has granted permission
           status === "granted" is false when user has not granted the permission
         */
-      hasCameraPermission: status === 'granted',
+      hascamerapermission: status === 'granted',
       buttonState: 'clicked',
       scanned: false,
     });
