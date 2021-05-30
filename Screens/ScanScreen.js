@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 
-export default class scannerClass extends React.Component {
+export default class scanScreen extends React.Component {
   constructor() {
     super();
     this.state = {
